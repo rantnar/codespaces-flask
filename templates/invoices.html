@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wyświetl Faktury</title>
+</head>
+<body>
+    <form method="get">
+        <label for="invoice_number">Numer faktury:</label>
+        <input type="text" id="invoice_number" name="invoice_number">
+        <input type="submit" value="Filtruj">
+    </form>
+    <table id="invoices_table">
+        <!-- Tabela faktur zostanie tutaj wypełniona -->
+        <table>
+            <tr>
+              <th>Numer faktury</th>
+              <th>Wartość faktury</th>
+              <th>Data wystawienia faktury</th>
+              <th>Waluta</th>
+              <th>Płatności</th>
+            </tr>
+            {% for invoice in invoices %}
+            <tr>
+              <td>{{ invoice.invoice_number }}</td>
+              <td>{{ invoice.invoice_quote }}</td>
+              <td>{{ invoice.invoice_date_issue }}</td>
+              <td>{{ invoice.currency }}</td>
+              <td>{{ invoice.payments }}</td>
+            </tr>
+            {% endfor %}
+          </table>
+    </table>
+</body>
+</html>

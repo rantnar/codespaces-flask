@@ -1,19 +1,15 @@
+<!DOCTYPE html>
+<html>
 <head>
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
-
+    <title>Menu Faktur</title>
+</head>
 <body>
-    <div class="App">
-        <header class="App-header">
-            <img src="{{ url_for('static', filename='Octocat.png') }}" class="App-logo" alt="logo" />
-            <p>
-                GitHub Codespaces <span class="heart">♥️</span> Flask
-            </p>
-            <p class="small">
-                Edit <code>templates/index.html</code> and refresh to see your changes!
-            </p>
-        </header>
-    </div>
+    <nav>
+        <ul>
+            <li><a href="/add_invoice">Dodaj Fakturę</a></li>
+            <li><a href="#">Dodaj płatność</a></li>
+            <li><a href="/invoices">Wyświetl Fakturę</a></li>
+        </ul>
+    </nav>
 </body>
-
 </html>
